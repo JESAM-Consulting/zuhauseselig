@@ -59,7 +59,7 @@ export default function Step1() {
             }
             setStep(step + 1);
           }}
-          className="text-white bg-yellow-1 font-roboto rounded-md py-2.5 w-44 text-center font-semibold hover:cursor-pointer transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#76756d]">
+          className="text-white bg-yellow-1 font-roboto rounded-md py-2.5 w-44 text-center font-semibold hover:cursor-pointer transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#977e6d]">
           {label}
         </div>
       </div>

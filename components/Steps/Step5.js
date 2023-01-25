@@ -32,6 +32,60 @@ export default function Step5() {
   };
 
   const onSubmit = async (data) => {
+    console.log(data);
+    const sendData = {
+      vorname: data.name,
+      plz: userData.step4,
+      stromverbrauch: userData.step1,
+      Eigentuemer: userData?.step3?.[0],
+      // isLiveInOwnProperty: userData?.step3?.[1],
+      dachform: userData.step2,
+      telefon: data.telefon,
+      email: data.email,
+      leadherkunft: "https://zuhauseselig.netlify.app",
+    };
+    await axios
+      .post(
+        `https://fe-partnerportal.de/FE_API/lead_api/v1/lead`,
+        sendData,
+        config
+      )
+      .then((res) => {
+        myForm.current.reset();
+
+        setStep(step + 1);
+      })
+
+
+      const Data = {
+        name: data.name,
+        plz: userData.step4,
+        stromverbrauch: userData.step1,
+        Eigentuemer: userData?.step3?.[0],
+        // isLiveInOwnProperty: userData?.step3?.[1],
+        dachform: userData.step2,
+        telefon: data.telefon,
+        email: data.email,
+        leadherkunft: "https://zuhauseselig.netlify.app",
+        project:"zuhauseselig"
+      };
+
+      await axios
+      .post(
+        `https://fe-lead-commen-api.rejoicehub.com/FE_API/lead_api/v1/contact`,
+        Data,
+        config
+      )
+      .then((res) => {
+        myForm.current.reset();
+        setStep(step + 1);
+      })
+
+
+      .catch((error) => {
+        console.log(error);
+      });
+
     const DataToSend = {
       from: "FE Leads Generator",
       to: forEmail,
@@ -60,61 +114,6 @@ export default function Step5() {
     };
 
     const respuesta = await sendForm(DataToSend);
-    
-    console.log(data);
-    const sendData = {
-      vorname: data.name,
-      plz: userData.step4,
-      stromverbrauch: userData.step1,
-      Eigentuemer: userData?.step3?.[0],
-      // isLiveInOwnProperty: userData?.step3?.[1],
-      dachform: userData.step2,
-      telefon: data.telefon,
-      email: data.email,
-      leadherkunft: "https://www.solar-pvcheck.de",
-    };
-    await axios
-      .post(
-        `https://fe-partnerportal.de/FE_API/lead_api/v1/lead`,
-        sendData,
-        config
-      )
-      .then((res) => {
-        myForm.current.reset();
-
-        setStep(step + 1);
-      })
-
-      const Data = {
-        name: data.name,
-        plz: userData.step4,
-        stromverbrauch: userData.step1,
-        Eigentuemer: userData?.step3?.[0],
-        // isLiveInOwnProperty: userData?.step3?.[1],
-        dachform: userData.step2,
-        telefon: data.telefon,
-        email: data.email,
-        leadherkunft: "https://www.solar-pvcheck.de",
-        project:"deniashome"
-      };
-
-      await axios
-      .post(
-        `https://fe-lead-commen-api.rejoicehub.com/FE_API/lead_api/v1/contact`,
-        Data,
-        config
-      )
-      .then((res) => {
-        myForm.current.reset();
-        setStep(step + 1);
-      })
-
-
-      .catch((error) => {
-        console.log(error);
-      });
-
-   
     // if (respuesta.data.cod_resp === "000") {
     //   myForm.current.reset();
 
@@ -187,7 +186,7 @@ export default function Step5() {
         </div>
         <button
           type="submit"
-          className="mt-4 bg-yellow-1 outline-none lg:px-12 lg:text-base md:px-8 font-visby font-bold py-3 rounded-md hover:cursor-pointer text-white transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#76756d] md:text-sm md:w-auto w-full">
+          className="mt-4 bg-yellow-1 outline-none lg:px-12 lg:text-base md:px-8 font-visby font-bold py-3 rounded-md hover:cursor-pointer text-white transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#977e6d] md:text-sm md:w-auto w-full">
           Angebote erhalten kostenlos & unverbindlich
         </button>
 

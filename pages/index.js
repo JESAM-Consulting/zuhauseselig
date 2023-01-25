@@ -185,7 +185,7 @@ export default function Home() {
               setStep(step - 1);
             }}
             data-show={step != 0 && step != 6}
-            className={`bg-yellow-1 mb-4 mx-6 md:hidden z-50 backButton relative group hover:cursor-pointer  transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#76756d] flex justify-center items-center space-x-3 font-roboto rounded-md py-2.5 md:w-32 w-10 text-white text-center`}>
+            className={`bg-yellow-1 mb-4 mx-6 md:hidden z-50 backButton relative group hover:cursor-pointer  transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#977e6d] flex justify-center items-center space-x-3 font-roboto rounded-md py-2.5 md:w-32 w-10 text-white text-center`}>
             <span className="w-3 group-hover:-translate-x-[0.18rem] transition-all ease-in-out duration-150">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                 <path
@@ -221,7 +221,7 @@ export default function Home() {
               step != 5
                 ? " right-4 bottom-3 "
                 : " right-[5rem] bottom-[5.5rem] "
-            } backButton group hover:cursor-pointer  transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#76756d] flex justify-center items-center space-x-3 font-roboto rounded-md py-2.5 md:w-32 w-10 text-white text-center`}>
+            } backButton group hover:cursor-pointer  transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#977e6d] flex justify-center items-center space-x-3 font-roboto rounded-md py-2.5 md:w-32 w-10 text-white text-center`}>
             <span className="w-3 group-hover:-translate-x-1 transition-all ease-in-out duration-150">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                 <path
@@ -238,7 +238,7 @@ export default function Home() {
         </div>
         <div className="overflow-hidden md:block hidden">
           <img
-            src="/images/house.webp"
+            src="/images/house.jpg"
             alt=""
             className={`${
               step < 6 ? "block" : "hidden"

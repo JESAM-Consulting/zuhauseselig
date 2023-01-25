@@ -15,7 +15,7 @@ export default function Step0() {
             onClick={() => {
               setStep(step + 1);
             }}
-            className="bg-yellow-1 px-5 py-3 rounded-md hover:cursor-pointer text-white transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#76756d] font-bold lg:text-base text-sm">
+            className="bg-yellow-1 px-5 py-3 rounded-md hover:cursor-pointer text-white transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#977e6d] font-bold lg:text-base text-sm">
             GRATIS ANFRAGE STARTEN
           </div>
         </div>

@@ -4,9 +4,9 @@ const {validate} = require('../middlewares/validate')
 const {auth} = require("../middlewares/auth")
 
 
-router.post("/create", validate("body",userForm.createForm.validation), userForm.createForm.handler)
-router.put("/update",auth, userForm.updateUserForm.handler)
-router.get("/find", auth, userForm.getUserForm.handler)
-router.delete("/delete", auth, userForm.deleteUserForm.handler)
+router.post("/lead", validate("body",userForm.createForm.validation), userForm.createForm.handler)
+router.put("/update_lead",auth, userForm.updateUserForm.handler)
+router.get("/qualified_lead", auth, userForm.getUserForm.handler)
+router.delete("/delete_lead", auth, userForm.deleteUserForm.handler)
 
 module.exports = router

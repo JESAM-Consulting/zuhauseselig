@@ -1,11 +1,10 @@
 {
-  "name": "new-project",
+  "name": "FE-leads",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon --inspect app.js"
+    "start": "nodemon --inspect app.js"
   },
   "keywords": [],
   "author": "",

@@ -2,65 +2,39 @@ import React, { useState, useContext, useEffect } from "react";
 import AppContext from "../../Context/AppContext";
 
 export default function Step1() {
-  const [data, setData] = useState(null);
   const { step, setStep, userData, setUserData } = useContext(AppContext);
-  const [label, setLabel] = useState("weiß ich nicht");
-  const [err, setErr] = useState(false);
-
-  useEffect(() => {
-    if (data) {
-      setLabel("weiter");
-    } else {
-      setLabel("weiß ich nicht");
-    }
-  }, [data]);
 
   return (
     <div data-show={step == 1 ? true : false} className="flex flex-col step">
-      <h1 className="font-visby lg:text-4xl md:text-3xl text-xl font-bold ">
-        Wie hoch ist Ihr Stromverbrauch?
+      <h1 className="font-visby lg:text-3xl md:text-2xl text-xl font-bold ">
+        Sind Sie Eigentümer der Immobilie?
       </h1>
 
-      <div className="md:mt-10 mt-4 flex lg:items-center lg:space-x-8 lg:flex-row flex-col lg:space-y-0 space-y-4">
-        <div className="relative flex items-center font-visby">
-          <input
-            type="number"
-            name=""
-            value={data ? data : ""}
-            onChange={(e) => {
-              setErr(false);
-              setData(e.target.value);
+      <div className="md:mt-8 mt-4 flex lg:items-center lg:space-x-8 lg:flex-row flex-col lg:space-y-0 space-y-4">
+        <div className="flex md:items-center space-x-5 justify-center">
+          <div
+            onClick={() => {
+              setUserData({
+                ...userData,
+                step1: "Ja",
+              });
+              setStep(step + 1);
             }}
-            placeholder="kWh/Jahr"
-            className={`border ${
-              err ? " border-red-700 " : " border-[#D9D9D9] "
-            } p-3 rounded-md outline-none w-80 placeholder-[#A1A1A1]`}
-          />
-          <span
-            className={`text-[#A1A1A1] absolute right-3 ${
-              data ? " block " : " hidden "
-            }`}>
-            kWh/Jahr
-          </span>
-        </div>
+            className="font-bold font-roboto md:w-[8rem] w-[8rem] text-center py-2  md:py-3 border-green-1 border rounded-md hover:bg-green-1 hover:text-white hover:cursor-pointer transition-all ease-in-out duration-150 bg-opacity-90 hover:shadow-md text-green-1 bg-white">
+            Ja
+          </div>
 
-        <div
-          onClick={() => {
-            if (data) {
+          <div
+            onClick={() => {
               setUserData({
                 ...userData,
-                step1: data,
+                step1: "Nein",
               });
-            } else {
-              setUserData({
-                ...userData,
-                step1: "weiß ich nicht",
-              });
-            }
-            setStep(step + 1);
-          }}
-          className="text-white bg-yellow-1 font-roboto rounded-md py-2.5 w-44 text-center font-semibold hover:cursor-pointer transition-all ease-in-out duration-150 hover:bg-opacity-90 hover:shadow-md hover:shadow-[#977e6d]">
-          {label}
+              setStep(step + 1);
+            }}
+            className="font-bold font-roboto md:w-[8rem] w-[8rem] text-center py-2  md:py-3 border-green-1 border rounded-md hover:bg-green-1 hover:text-white hover:cursor-pointer transition-all ease-in-out duration-150 bg-opacity-90 hover:shadow-md  text-green-1 bg-white">
+            Nein
+          </div>
         </div>
       </div>
     </div>

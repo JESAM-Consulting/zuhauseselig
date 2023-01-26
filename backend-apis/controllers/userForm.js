@@ -23,19 +23,20 @@ const createForm = {
                 phone,
                 email,
                 powerconsuption,
+                persons,
                 owner,
-                isLiveInOwnProperty,
                 interestfunding,
                 reachability,
                 typeofbuilding,
                 roofshape,
                 typeroofcovering,
                 typeheating,
-                remarks
+                remarks,
+                configure
             } = req.body
 
             if (postcode) {
-                if (postcode.toString().length !== 5) {
+                if (postcode.toString()?.length !== 5) {
                     return res.status(enums.HTTP_CODES.BAD_REQUEST).json({
                         status: false,
                         message: message.POSTCODEERR
@@ -56,8 +57,8 @@ const createForm = {
                 postcode: postcode,
                 location: location,
                 powerconsuption: powerconsuption,
+                persons: persons,
                 owner: owner,
-                isLiveInOwnProperty: isLiveInOwnProperty,
                 interestfunding: interestfunding,
                 reachability: reachability,
                 typeofbuilding: typeofbuilding,
@@ -67,6 +68,7 @@ const createForm = {
                 remarks: remarks,
                 phone: phone,
                 email: email,
+                configure: configure,
             }
 
             let jsonResponse = JSON.stringify(body)
@@ -139,7 +141,6 @@ const getUserForm = {
 }
 
 const updateUserForm = {
-
     handler: async (req, res) => {
         try {
             const { id } = req.query

@@ -20,7 +20,7 @@
     "POSTCODEREQ": "postcode is required",
 
     "NO_TOKEN": "token is not defined ",
-    "NO_API_ACC": "invalid api account ",
+    "NO_API_ACC": "Api account is not defined ",
     "INVALID_TOKEN": "the token you have enered is invalid, please check it before any action!",
     "NO_REQUSER": "couldn't find data from req.user!",
     "VERIFIED": "user verified successfully! you can login and change your password",

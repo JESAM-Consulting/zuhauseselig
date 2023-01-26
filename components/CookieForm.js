@@ -9,6 +9,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
   const [analytics, setAnalytics] = useState(true);
   const [gac, setGac] = useState(true);
   const [werch, setWerch] = useState(false);
+  const [gtag, setGtag] = useState(true);
 
   const handleCancel = () => {
     setCancel(true);
@@ -31,6 +32,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
     Cookies.remove("funktional");
     Cookies.remove("werch");
     Cookies.remove("analytics");
+    Cookies.remove("gtag");
     Cookies.remove("gac");
     Cookies.set("first_time", false, { expires: 7 });
     setShow(false);
@@ -52,6 +54,9 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
       expires: 7,
     });
     Cookies.set("analytics", analytics, {
+      expires: 7,
+    });
+    Cookies.set("gtag", gtag, {
       expires: 7,
     });
     Cookies.set("werch", werch, {
@@ -97,16 +102,16 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
           personalisierte Empfehlungen und Werbung auszuspielen. Hierfür bitten
           wir um Ihre Einwilligung. Sie können diese jederzeit – auch später
           noch ändern oder widerrufen. Mehr erfahren Sie in der{" "}
-          <Link legacyBehavior href="/datenschutz">
-            <a className="text-yellow-1">Datenschutzerklärung</a>
+          <Link href="/datenschutz">
+            <a className="text-[#005039]">Datenschutzerklärung</a>
           </Link>
         </p>
         <div className="flex text-sm my-6 space-x-6">
-          <Link legacyBehavior href="/datenschutz">
-            <a className="text-yellow-1 underline">Datenschutz</a>
+          <Link href="/datenschutz">
+            <a className="text-[#005039] underline">Datenschutz</a>
           </Link>
-          <Link legacyBehavior href="/impressum">
-            <a className="text-yellow-1 underline">Impressum</a>
+          <Link href="/impressum">
+            <a className="text-[#005039] underline">Impressum</a>
           </Link>
         </div>
         <div className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:justify-between">
@@ -117,7 +122,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
           </div>
           <div
             onClick={aceptCookie}
-            className="md:w-[16rem] w-full text-center py-2.5 text-white bg-yellow-1 hover:cursor-pointer transition-all ease-in-out duration-200 hover:bg-opacity-90">
+            className="md:w-[16rem] w-full text-center py-2.5 text-white bg-green-1 hover:cursor-pointer transition-all ease-in-out duration-200 hover:bg-opacity-90">
             Alles Akzeptieren
           </div>
         </div>
@@ -156,11 +161,11 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
             </p>
 
             <div className="flex text-sm md:my-6 my-2 space-x-6">
-              <Link legacyBehavior href="/datenschutz">
-                <a className="text-yellow-1 underline">Datenschutz</a>
+              <Link href="/datenschutz">
+                <a className="text-[#005039] underline">Datenschutz</a>
               </Link>
-              <Link legacyBehavior href="/impressum">
-                <a className="text-yellow-1 underline">Impressum</a>
+              <Link href="/impressum">
+                <a className="text-[#005039] underline">Impressum</a>
               </Link>
             </div>
 
@@ -217,7 +222,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -242,7 +247,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -255,7 +260,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                                 <path
                                   d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
                                   fill="#ffffff"
-                                  fillRule="nonzero"></path>
+                                  fill-rule="nonzero"></path>
                               </g>
                             </g>
                           </g>
@@ -289,7 +294,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -314,7 +319,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -327,7 +332,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                                 <path
                                   d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
                                   fill="#ffffff"
-                                  fillRule="nonzero"></path>
+                                  fill-rule="nonzero"></path>
                               </g>
                             </g>
                           </g>
@@ -355,7 +360,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -401,7 +406,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -444,7 +449,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -469,7 +474,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -482,7 +487,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                                 <path
                                   d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
                                   fill="#ffffff"
-                                  fillRule="nonzero"></path>
+                                  fill-rule="nonzero"></path>
                               </g>
                             </g>
                           </g>
@@ -513,7 +518,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -538,7 +543,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -551,7 +556,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                                 <path
                                   d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
                                   fill="#ffffff"
-                                  fillRule="nonzero"></path>
+                                  fill-rule="nonzero"></path>
                               </g>
                             </g>
                           </g>
@@ -561,75 +566,6 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                   </div>
                 </div>
               </div>{" "}
-              {/* <div className="w-full lg:text-sm md:text-base text-sm">
-                <div
-                  onClick={() => {
-                    setAff(!aff);
-                  }}
-                  className="hover:cursor-pointer border items-center  border-black border-opacity-10 rounded-md p-4 py-2">
-                  <div className="w-full">
-                    <p>affilinet (Webmasterplan)</p>
-                    <div className="flex justify-between">
-                      <p className="md:text-sm lg:text-xs text-xs md:mt-1 mt-2">
-                        Marketing
-                      </p>
-                      <div>
-                        <svg
-                          className={`${aff ? " block " : "hidden"}`}
-                          aria-hidden="true"
-                          width="42px"
-                          height="23px"
-                          viewBox="0 0 42 23"
-                          version="1.1"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
-                            <g transform="translate(-86.000000, -31.000000)">
-                              <g transform="translate(87.000000, 32.949632)">
-                                <path
-                                  d="M30.0094932,-0.5 C32.8534346,-0.5 35.4330697,0.632406246 37.3226603,2.47154687 C39.2173227,4.31562389 40.4181217,6.87029149 40.4959736,9.70631513 C40.4981622,12.7440885 39.3375699,15.4233885 37.4620437,17.3539966 C35.5609243,19.3109495 32.9241909,20.5 30.0094932,20.5 L30.0094932,20.5 L9.99050677,20.5 C7.14626154,20.5 4.56639324,19.3679366 2.67675543,17.5287725 C0.782448937,15.6850644 -0.418130086,13.1306858 -0.49597372,10.2937978 C-0.498162151,7.25597731 0.662425032,4.576654 2.53794226,2.64603293 C4.43906304,0.689056047 7.07580212,-0.5 9.99050677,-0.5 L9.99050677,-0.5 Z"
-                                  stroke="#ffffff"
-                                  fill="#B29A89"></path>
-                                <path
-                                  d="M30,18 C34.418278,18 38,14.418278 38,10 C38,5.581722 34.418278,2 30,2 C25.581722,2 22,5.581722 22,10 C22,14.418278 25.581722,18 30,18 Z"
-                                  fill="#ffffff"></path>
-                                <path
-                                  d="M15.8228065,6.13470278 C16.038065,6.32450074 16.0587048,6.65286384 15.8689068,6.8681223 C15.8665182,6.87083131 15.8641014,6.87351535 15.8616569,6.87617398 L9.47642761,13.8205455 C9.39995063,13.9037194 9.30336409,13.9576046 9.20086748,13.9814572 C9.01166585,14.0332136 8.80114396,13.9796182 8.65955286,13.8256282 L8.65955286,13.8256282 L6.13834311,11.083641 L6.13834311,11.083641 L6.13109318,11.0755893 C5.94129522,10.8603308 5.96193502,10.5319677 6.17719348,10.3421698 C6.39831738,10.1472001 6.73475108,10.164828 6.93428873,10.3818388 L6.93428873,10.3818388 L9.06521734,12.6992981 L15.0657113,6.17437179 C15.2652489,5.95736102 15.6016826,5.93973313 15.8228065,6.13470278 Z"
-                                  fill="#ffffff"></path>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                        <svg
-                          className={`${!aff ? " block " : "hidden"}`}
-                          aria-hidden="true"
-                          width="42px"
-                          height="23px"
-                          viewBox="0 0 42 23"
-                          version="1.1"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
-                            <g transform="translate(-86.000000, -31.000000)">
-                              <g transform="translate(87.000000, 32.949632)">
-                                <path
-                                  d="M30.0094932,-0.5 C32.8534346,-0.5 35.4330697,0.632406246 37.3226603,2.47154687 C39.2173227,4.31562389 40.4181217,6.87029149 40.4959736,9.70631513 C40.4981622,12.7440885 39.3375699,15.4233885 37.4620437,17.3539966 C35.5609243,19.3109495 32.9241909,20.5 30.0094932,20.5 L30.0094932,20.5 L9.99050677,20.5 C7.14626154,20.5 4.56639324,19.3679366 2.67675543,17.5287725 C0.782448937,15.6850644 -0.418130086,13.1306858 -0.49597372,10.2937978 C-0.498162151,7.25597731 0.662425032,4.576654 2.53794226,2.64603293 C4.43906304,0.689056047 7.07580212,-0.5 9.99050677,-0.5 L9.99050677,-0.5 Z"
-                                  stroke="#ffffff"
-                                  fill="#595959"></path>
-                                <path
-                                  d="M 10 18 C 14.4183 18 18 14.4183 18 10 C 18 5.5817 14.4183 2 10 2 C 5.5817 2 2 5.5817 2 10 C 2 14.4183 5.5817 18 10 18 Z"
-                                  fill="#ffffff"></path>
-                                <path
-                                  d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
-                                  fill="#ffffff"
-                                  fillRule="nonzero"></path>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>{" "} */}
               <div className="w-full lg:text-sm md:text-base text-sm">
                 <div
                   onClick={() => {
@@ -651,7 +587,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -676,7 +612,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                           viewBox="0 0 42 23"
                           version="1.1"
                           xmlns="http://www.w3.org/2000/svg">
-                          <g fill="none" fillRule="evenodd">
+                          <g fill="none" fill-rule="evenodd">
                             <g transform="translate(-86.000000, -31.000000)">
                               <g transform="translate(87.000000, 32.949632)">
                                 <path
@@ -689,7 +625,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                                 <path
                                   d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
                                   fill="#ffffff"
-                                  fillRule="nonzero"></path>
+                                  fill-rule="nonzero"></path>
                               </g>
                             </g>
                           </g>
@@ -698,7 +634,76 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
                     </div>
                   </div>
                 </div>
-              </div>{" "}
+              </div>
+              <div className="w-full lg:text-sm md:text-base text-sm">
+                <div
+                  onClick={() => {
+                    setGtag(!gtag);
+                  }}
+                  className="hover:cursor-pointer border items-center  border-black border-opacity-10 rounded-md p-4 py-2">
+                  <div className="w-full">
+                    <p>Google Tag Manager</p>
+                    <div className="flex justify-between">
+                      <p className="md:text-sm lg:text-xs text-xs md:mt-1 mt-2">
+                        Marketing
+                      </p>
+                      <div>
+                        <svg
+                          className={`${gtag ? " block " : "hidden"}`}
+                          aria-hidden="true"
+                          width="42px"
+                          height="23px"
+                          viewBox="0 0 42 23"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(-86.000000, -31.000000)">
+                              <g transform="translate(87.000000, 32.949632)">
+                                <path
+                                  d="M30.0094932,-0.5 C32.8534346,-0.5 35.4330697,0.632406246 37.3226603,2.47154687 C39.2173227,4.31562389 40.4181217,6.87029149 40.4959736,9.70631513 C40.4981622,12.7440885 39.3375699,15.4233885 37.4620437,17.3539966 C35.5609243,19.3109495 32.9241909,20.5 30.0094932,20.5 L30.0094932,20.5 L9.99050677,20.5 C7.14626154,20.5 4.56639324,19.3679366 2.67675543,17.5287725 C0.782448937,15.6850644 -0.418130086,13.1306858 -0.49597372,10.2937978 C-0.498162151,7.25597731 0.662425032,4.576654 2.53794226,2.64603293 C4.43906304,0.689056047 7.07580212,-0.5 9.99050677,-0.5 L9.99050677,-0.5 Z"
+                                  stroke="#ffffff"
+                                  fill="#B29A89"></path>
+                                <path
+                                  d="M30,18 C34.418278,18 38,14.418278 38,10 C38,5.581722 34.418278,2 30,2 C25.581722,2 22,5.581722 22,10 C22,14.418278 25.581722,18 30,18 Z"
+                                  fill="#ffffff"></path>
+                                <path
+                                  d="M15.8228065,6.13470278 C16.038065,6.32450074 16.0587048,6.65286384 15.8689068,6.8681223 C15.8665182,6.87083131 15.8641014,6.87351535 15.8616569,6.87617398 L9.47642761,13.8205455 C9.39995063,13.9037194 9.30336409,13.9576046 9.20086748,13.9814572 C9.01166585,14.0332136 8.80114396,13.9796182 8.65955286,13.8256282 L8.65955286,13.8256282 L6.13834311,11.083641 L6.13834311,11.083641 L6.13109318,11.0755893 C5.94129522,10.8603308 5.96193502,10.5319677 6.17719348,10.3421698 C6.39831738,10.1472001 6.73475108,10.164828 6.93428873,10.3818388 L6.93428873,10.3818388 L9.06521734,12.6992981 L15.0657113,6.17437179 C15.2652489,5.95736102 15.6016826,5.93973313 15.8228065,6.13470278 Z"
+                                  fill="#ffffff"></path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                        <svg
+                          className={`${!gtag ? " block " : "hidden"}`}
+                          aria-hidden="true"
+                          width="42px"
+                          height="23px"
+                          viewBox="0 0 42 23"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <g fill="none" fill-rule="evenodd">
+                            <g transform="translate(-86.000000, -31.000000)">
+                              <g transform="translate(87.000000, 32.949632)">
+                                <path
+                                  d="M30.0094932,-0.5 C32.8534346,-0.5 35.4330697,0.632406246 37.3226603,2.47154687 C39.2173227,4.31562389 40.4181217,6.87029149 40.4959736,9.70631513 C40.4981622,12.7440885 39.3375699,15.4233885 37.4620437,17.3539966 C35.5609243,19.3109495 32.9241909,20.5 30.0094932,20.5 L30.0094932,20.5 L9.99050677,20.5 C7.14626154,20.5 4.56639324,19.3679366 2.67675543,17.5287725 C0.782448937,15.6850644 -0.418130086,13.1306858 -0.49597372,10.2937978 C-0.498162151,7.25597731 0.662425032,4.576654 2.53794226,2.64603293 C4.43906304,0.689056047 7.07580212,-0.5 9.99050677,-0.5 L9.99050677,-0.5 Z"
+                                  stroke="#ffffff"
+                                  fill="#595959"></path>
+                                <path
+                                  d="M 10 18 C 14.4183 18 18 14.4183 18 10 C 18 5.5817 14.4183 2 10 2 C 5.5817 2 2 5.5817 2 10 C 2 14.4183 5.5817 18 10 18 Z"
+                                  fill="#ffffff"></path>
+                                <path
+                                  d="M 29.725 10.204 l 3.318 -3.315 a 0.51 0.51 0 1 0 -0.724 -0.724 L 29 9.48 l -3.319 -3.315 a 0.51 0.51 0 1 0 -0.724 0.724 l 3.318 3.315 l -3.318 3.317 a 0.51 0.51 0 1 0 0.724 0.723 L 29 10.928 l 3.319 3.317 a 0.509 0.509 0 0 0 0.724 0 c 0.2 -0.2 0.2 -0.525 0 -0.724 l -3.318 -3.317 z"
+                                  fill="#ffffff"
+                                  fill-rule="nonzero"></path>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="bg-white md:mt-0 mt-2 absolute bottom-3 left-0  w-full px-8 pt-5 border-t border-black border-opacity-10">
@@ -710,7 +715,7 @@ export default function CookieForm({ show, setShow, cancel, setCancel }) {
               </div>
               <div
                 onClick={aceptCookie}
-                className="md:w-[16rem] w-full text-center py-2.5 text-white bg-yellow-1 hover:cursor-pointer transition-all ease-in-out duration-200 hover:bg-opacity-90">
+                className="md:w-[16rem] w-full text-center py-2.5 text-white bg-green-1 hover:cursor-pointer transition-all ease-in-out duration-200 hover:bg-opacity-90">
                 Alles Akzeptieren
               </div>
             </div>

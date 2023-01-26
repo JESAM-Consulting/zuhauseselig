@@ -1,5 +1,5 @@
 apps:
-    - name: new_project
+    - name: FE_LEADS
       restart_delay: 100
       script: npm run start
       autorestart: true

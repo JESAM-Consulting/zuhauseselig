@@ -12,7 +12,7 @@ const auth = async ( req, res, next ) => {
             .send( { message: message.NO_TOKEN } )
     }
 
-    if(apiAccount != 71658){
+    if(apiAccount != 62319){
         return res
             .status( enums.HTTP_CODES.BAD_REQUEST )
             .send( { message: message.NO_API_ACC } )

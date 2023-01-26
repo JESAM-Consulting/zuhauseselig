@@ -109,13 +109,13 @@ input[type="number"] {
 .step {
   position: absolute;
   opacity: 0;
-  transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms;
+  transition: 100ms opacity ease-in-out;
+  transition-delay: 100ms;
 }
 
 @media (max-width: 576px) {
   .step {
-    transition: 200ms position ease-in-out;
+    transition: 100ms position ease-in-out;
   }
 }
 
@@ -124,6 +124,21 @@ input[type="number"] {
   z-index: 100;
   position: relative;
   transition-delay: 0;
+}
+
+.backButtonM {
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  display: none;
+}
+
+@media (max-width: 870px) {
+  .backButtonM[data-show="true"] {
+    opacity: 1;
+    z-index: 300;
+    display: flex;
+  }
 }
 
 .backButton {
@@ -137,4 +152,149 @@ input[type="number"] {
   opacity: 1;
   z-index: 300;
   visibility: visible;
+}
+
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 2%;
+  background-color: #fff;
+  border: #0d232f 1px solid;
+}
+
+/* On mouse-over, add a grey background color */
+.container_check:hover input ~ .checkmark2 {
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_check input:checked ~ .checkmark2 {
+  background-color: #fff;
+  border: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_check input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_check .checkmark2:after {
+  left: 5px;
+  top: 1px;
+  width: 8px;
+  height: 14px;
+  border: solid #B29A89;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.backline {
+  position: relative;
+}
+
+.backline::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 110%;
+  height: 18px;
+  left: 0;
+  bottom: 0;
+  background-color: #B29A89;
+}
+
+@media (max-width: 567px) {
+  .backline::after {
+    height: 10px;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #1d1d1b;
+  font-family: "Visby", sans-serif;
+  -webkit-text-fill-color: #0d232f;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(255 255 255) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.fade-in {
+  animation: fade 500ms 1;
+  transition: opacity 500ms ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.card-info-calc {
+  left: 3rem;
+  transform: translateY(6.3rem);
+  transition: all 0.5s ease-in-out;
+}
+
+.card-info-calc[data-show="false"] {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+  transform-origin: left;
+  height: 0;
+}
+
+.card-info-calc[data-show="true"] {
+  width: 23rem;
+
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.sun-btn[data-show="false"] {
+  transform: rotate(0deg) scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.sun-btn[data-show="true"] {
+  transform: rotate(360deg) scale(0.7);
+
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 135% !important;
+  }
+}
+@media screen and (max-width: 540px) {
+  .width-full-mobile-devices {
+    width: 100% !important;
+  }
 }

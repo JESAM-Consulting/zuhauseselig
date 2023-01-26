@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -20,180 +19,110 @@ export default function Impressum() {
           </p>
 
           <p>
-            <span className="font-bold">Angaben gemäß § 5 TMG</span>
+            <span className="font-bold">FE Leads GmbH</span>
           </p>
           <p>
-            <span>Energiekonzepte Deutschland GmbH</span>
+            <span>Zollpfad 4</span>
             <br />
-            <span>Straße des 17. Juni 4a</span>
-            <br />
-            <span>04425 Taucha</span>
+            <span>D-28217 Bremen</span>
           </p>
+          <br />
 
+          <p>Zertifizierter Partner der Energiekonzepte Deutschland GmbH</p>
           <p>
             <br />
-            <span>Handelsregister: HRB 34979</span>
+            <span>Registergericht: Amtsgericht Bremen</span>
             <br />
-            <span>Registergericht: AG Leipzig</span>
+            <span>HRB 38018</span>
             <br />
-            <p>
-              <br />
-              <span className="font-semibold">Vertreten durch:</span>
-              <br />
-              <span>Geschäftsführer Silvio Bräuer, Ricardo Kopp</span>
-              <br />
-            </p>
+            <span>USt.-Ident.-Nr. DE353153929</span>
             <br />
-            <span className="font-semibold">Kontakt</span>
             <br />
             <span>
               E-Mail:{" "}
               <a
-                className="hover:text-yellow-1 transition-all ease-in-out duration-150"
-                href="mailto: info@ekd-solar.de ">
-                info@ekd-solar.de
+                className="text-green-15"
+                href="mailto: datenschutz@fe-leads.de">
+                datenschutz@fe-leads.de
               </a>
             </span>
             <span>&nbsp;</span>
             <br />
             <span>Telefon: </span>
             <span>
-              <a
-                className="hover:text-yellow-1 transition-all ease-in-out duration-150"
-                href="tel:+49 342 98 98 990">
-                +49 342 98 98 990
+              <a className="text-green-15" href="tel:0421 6485230">
+                0421 6485230
               </a>
             </span>
           </p>
+          <p>
+            <br />
+            <span>vertreten durch den Geschäftsführer:</span>
+            <br />
+            <span>Pouria Daftari</span>
+            <br />
 
-          <div className="mt-4">
-            <p className="font-semibold">Umsatzsteuer-ID</p>
+            <span className="font-semibold">
+              Verbraucherinformation gemäß Verordnung EU Nr. 524/2013
+            </span>
+          </p>
 
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a
-              Umsatzsteuergesetz:
-            </p>
-            <p>DE318392423</p>
-          </div>
-
-          <div className="mt-4">
-            <p className="font-semibold mb-2">
-              Berufsbezeichnung und berufsrechtliche Regelungen
-            </p>
-
-            <p>Berufsbezeichnung: Photovoltaik + Stromspeicher Installateur</p>
-            <p>Zuständige Kammer:</p>
-            <p>Verliehen durch:</p>
-            <p>Es gelten folgende berufsrechtliche Regelungen:</p>
-            <p>Regelungen einsehbar unter:</p>
-          </div>
-
-          <div className="mt-4">
-            <p className="font-semibold mb-2">EU-Streitschlichtung</p>
-
-            <p>
+          <p>
+            <br />
+            <span>
               Die Europäische Kommission stellt eine Plattform zur
-              Online-Streitbeilegung (OS) bereit:{" "}
-              <Link href="https://ec.europa.eu/consumers/odr" passHref>
-                <a
-                  target="__blank"
-                  className="hover:text-yellow-1 transition-all ease-in-out duration-150">
-                  LINK
-                </a>
-              </Link>
-              .
-            </p>
-            <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
-          </div>
+              Online-Streitbeilegung (OS) bereit. Die Plattform finden Sie unter{" "}
+              <a
+                href="http://ec.europa.eu/consumers/odr/"
+                className="text-green-15">
+                http://ec.europa.eu/consumers/odr/
+              </a>
+            </span>
+            <br />
+            <br />
+          </p>
 
-          <div className="mt-4">
-            <p className="font-semibold mb-2">
-              Verbraucher­streit­beilegung/ Universal­schlichtungs­stelle
-            </p>
-
-            <p>
-              Wir sind nicht bereit oder verpflichtet, an
+          <p>
+            <span>
+              Unsere Email-Adresse lautet:{" "}
+              <a href="mailto: impressum@fe-leads.de" className="text-green-15">
+                impressum@fe-leads.de
+              </a>
+            </span>
+          </p>
+          <p>
+            <br />
+            <span className="text-semibold">
+              Verbraucherinformation gemäß Verbraucherstreitbeilegungsgesetz
+            </span>
+            <br />
+            <br />
+            <span>
+              Die FE Leads GmbH sind nicht bereit und verpflichtet, an
               Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-              teilzunehmen.
-            </p>
-          </div>
-          <div className="mt-4">
-            <p className="font-semibold mb-2">Haftung für Inhalte</p>
+              teilzunehmen. Rechtlicher Hinweis
+            </span>
 
-            <p>
-              Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
-              Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
-              verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
-              jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
-              Informationen zu überwachen oder nach Umständen zu forschen, die
-              auf eine rechtswidrige Tätigkeit hinweisen.
-            </p>
-            <p className="mt-3">
-              Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
-              Informationen nach den allgemeinen Gesetzen bleiben hiervon
-              unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem
-              Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.
-              Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
-              diese Inhalte umgehend entfernen.
-            </p>
-          </div>
+            <br />
+            <span>
+              Die Texte, Bilder, Grafiken, Animationen, Video- und Audiodateien
+              sowie alle weiteren Inhalte auf dieser Webseite unterliegen den
+              gesetzlichen Bestimmungen des Urheberrechts und ggf. weiteren
+              Rechten des geistigen Eigentums. Der geschützte Inhalt dieser
+              Webseite darf ohne Einwilligung des Rechtsinhabers nicht
+              vervielfältigt, verbreitet, wiedergegeben, öffentlich zugänglich
+              gemacht oder sonst verwertet werden.
+            </span>
+            <br />
+            <br />
 
-          <div className="mt-4">
-            <p className="font-semibold mb-2">Haftung für Links</p>
-
-            <p>
-              Unser Angebot enthält Links zu externen Websites Dritter, auf
-              deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
-              diese fremden Inhalte auch keine Gewähr übernehmen. Für die
-              Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter
-              oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten
-              wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
-              überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der
-              Verlinkung nicht erkennbar.
-            </p>
-            <p className="mt-3">
-              Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist
-              jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht
-              zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
-              derartige Links umgehend entfernen.
-            </p>
-          </div>
-
-          <div className="mt-4">
-            <p className="font-semibold mb-2">Urheberrecht</p>
-
-            <p>
-              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
-              diesen Seiten unterliegen dem deutschen Urheberrecht. Die
-              Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
-              Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
-              schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-              Downloads und Kopien dieser Seite sind nur für den privaten, nicht
-              kommerziellen Gebrauch gestattet.
-            </p>
-            <p className="mt-3">
-              Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt
-              wurden, werden die Urheberrechte Dritter beachtet. Insbesondere
-              werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
-              trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
-              bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
-              Rechtsverletzungen werden wir derartige Inhalte umgehend
-              entfernen.
-            </p>
-
-            <p className="mt-3">
-              Quelle:{" "}
-              <Link
-                href="https://www.e-recht24.de/impressum-generator.html"
-                passHref>
-                <a
-                  target="__blank"
-                  className="hover:text-yellow-1 transition-all ease-in-out duration-150">
-                  https://www.e-recht24.de/impressum-generator.html
-                </a>
-              </Link>
-            </p>
-          </div>
+            <span>
+              Änderungen von Konstruktion, Ausstattung und Lieferumfang sowie
+              Abweichungen im Farbton sowie Irrtümer bleiben vorbehalten. Alle
+              angegebenen Preise sind unverbindlich.
+            </span>
+            <br />
+          </p>
         </div>
       </div>
       <Footer />

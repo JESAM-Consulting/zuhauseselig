@@ -11,10 +11,12 @@ const port = process.env.PORT || 3030
 const userForm = require( "./routes/userMaster" )
 
 // define all routes here
-app.use( cors() )
+app.use( cors({
+    origin: "*"
+}) )
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.use( "/new-project/api/v1", userForm )
+app.use( "/FE_API/lead_api/v1", userForm )
 
 
 app.listen(port, () => console.log(`app is listning to port: ${port}!`))
